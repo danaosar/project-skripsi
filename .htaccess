@@ -1,0 +1,11 @@
+# Mengaktifkan mod_rewrite (untuk URL rewriting)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_METHOD} ^POST$
+    RewriteRule ^(.*)$ - [L]
+</IfModule>
+
+# Mengizinkan akses metode POST
+<Limit POST>
+    Allow from all
+</Limit>
